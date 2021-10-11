@@ -3,8 +3,8 @@
 
 ## Table of contents
 * [General info](#general-info)
-* [How does it work?](How-does-it-work?)
-* [Screenshots](Screenshots)
+* [How does it work?](#how-does-it-work?)
+* [Screenshots](#screenshots)
 
 ## General info
 This is my first JavaScript project, if you have any suggestions or thoughts I would gladly appreciate if you could contact me on here or on discord with the suggestion! This is my version of re-creating a nopixel tracker hack.
@@ -14,3 +14,6 @@ Basically, you get a list of random letters in which you need to find the combin
 
 ## Screenshots
 ![Image:](https://i.imgur.com/WvLl8FH.png)
+
+
+Contact me on Discord: Runner#4204
