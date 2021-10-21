@@ -8,7 +8,8 @@ const Letters =
 [ 
   ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
   ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
-  ["Φ", "Χ", "Γ", "Δ", "Ε", "Θ", "Λ", "Ξ", "Π", "Σ", "Ψ", "Ω"]
+  ["Φ", "Χ", "Γ", "Δ", "Ε", "Θ", "Λ", "Ξ", "Π", "Σ", "Ψ", "Ω"],
+  ["Ɔ", "Ǝ", "Ⅎ", "H", "I", "W", "N", "O", "Ԁ", "S"]
 ];
 
 const 
@@ -164,13 +165,18 @@ const refreshLetters = () => // Shifts the array and updates the spans
       if(--corrCombination < 0)
         endTask(false);
 
-      for(let i = 0; i < 79; ++i)
+      for(let i = 0; i <= 79; ++i)
       {
         document.getElementById(`S${i}`).textContent = rndCombination[i];
       }
     },
     1250
   );
+}
+
+const rand = (max) =>
+{
+  return Math.floor(Math.random() * max);
 }
 
 const createCombination = () => // Creates a random combination and inserts the required one that needs to be found
@@ -180,13 +186,13 @@ const createCombination = () => // Creates a random combination and inserts the 
     min = Math.random() * (25 - 16) + 16;
   
   for(let i = 0; i < 160; ++i)
-    rndCombination.push(Letters[gType][Math.floor(Math.random() * Letters[gType].length)] + Letters[gType][Math.floor(Math.random() * Letters[gType].length)]);
+    rndCombination.push(Letters[gType][rand(Letters[gType].length)] + Letters[gType][rand(Letters[gType].length)]);
   
   let
     insertComb = Math.round(Math.random() * (max - min) + min);
   
   for(let i = 0; i < 4; ++i)
-    comb.push(Letters[gType][Math.floor(Math.random() * Letters[gType].length)] + Letters[gType][Math.floor(Math.random() * Letters[gType].length)]);
+    comb.push(Letters[gType][rand(Letters[gType].length)] + Letters[gType][rand(Letters[gType].length)]);
 
   corrCombination = insertComb;
   
