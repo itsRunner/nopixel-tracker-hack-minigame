@@ -1,5 +1,6 @@
 # nopixel-tracker-hack-minigame
  
+Try it out for yourself here: https://itsrunner.github.io/nopixel-tracker-minigame/
 
 ## Table of contents
 * [General info](#general-info)
